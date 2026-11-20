@@ -1,0 +1,25 @@
+name: Publier les fichiers signés de Sport Foot 1.0
+on:
+  push:
+    branches: [arena/f0b65010-sport-foot]
+    paths: [.github/workflows/release-assets.yml]
+permissions:
+  contents: write
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          ref: v1.0.0
+          persist-credentials: false
+      - name: Vérifier les fichiers du tag
+        working-directory: downloads
+        run: |
+          openssl x509 -in SportFoot-cert.pem -pubkey -noout > "$RUNNER_TEMP/sportfoot.pub"
+          openssl dgst -sha256 -verify "$RUNNER_TEMP/sportfoot.pub" -signature SHA256SUMS.sig SHA256SUMS
+          sha256sum -c SHA256SUMS
+      - name: Joindre les fichiers à la release v1.0.0
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release upload v1.0.0 SportFoot-1.0.zip downloads/* --repo "$GITHUB_REPOSITORY"
