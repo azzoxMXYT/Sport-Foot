@@ -1,0 +1,8 @@
+/build/
+/src/cover.inc
+*.key
+*.p12
+*.jks
+*.pk8
+*.idsig
+__pycache__/

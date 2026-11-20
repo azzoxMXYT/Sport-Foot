@@ -1,0 +1,19 @@
+SPORT FOOT — ÉDITION ARCADE 01
+
+WINDOWS 10/11 x64 : ouvrir SportFoot-Windows.exe. Pas d'installation, de navigateur ni de connexion nécessaires. Entrée commence le match. Flèches, ZQSD ou WASD pour se déplacer ; Maj pour sprinter ; C pour passer, ou changer de joueur en défense ; Espace ou X pour tirer. Échap met en pause ; M depuis la pause revient au menu.
+
+ANDROID 8+ (ARM64) : ouvrir SportFoot-Android.apk sur le téléphone. Il s'agit d'une installation locale hors Play Store. En mode paysage, glisser à gauche pour courir et toucher PASSE ou TIR avec l'autre main. Le bouton en haut à droite met en pause. Pas de version iPhone.
+
+RÈGLES : vous jouez les Dunes (bleu) contre les Volcans (rouge). Le joueur actif est marqué en jaune. Attaquez à droite. Dirigez une passe vers un partenaire ; en frappant, haut/bas permet de viser. L'interception est automatique au contact du ballon. Deux périodes d'une minute, avec rebonds sur les bords du terrain.
+
+SIGNATURES : le jeu Windows et l'APK sont signés avec le certificat de projet auto-signé fourni. Il ne s'agit pas d'une identité d'éditeur certifiée par une autorité publique. Une alerte Windows SmartScreen ou « éditeur inconnu » reste possible. N'ajoutez pas ce certificat aux autorités racines de votre appareil.
+
+Empreinte SHA-256 du certificat :
+5A54D2AE2B64EB7215D46E205365C8E22AE0E54C1A71D2C2CEA1D2B6E16487AB
+
+VÉRIFIER : comparer l'empreinte du certificat avec celle obtenue depuis une source indépendante de confiance. SHA256SUMS contient les empreintes des deux applications. Depuis le dossier extrait, avec OpenSSL et sha256sum :
+  openssl x509 -in SportFoot-cert.pem -noout -fingerprint -sha256
+  openssl x509 -in SportFoot-cert.pem -pubkey -noout > public.pem
+  openssl dgst -sha256 -verify public.pem -signature SHA256SUMS.sig SHA256SUMS
+  sha256sum -c SHA256SUMS
+Sous PowerShell, Get-FileHash .\SportFoot-Windows.exe donne l'empreinte SHA-256 du fichier. Propriétés > Signatures numériques affiche la signature Windows. Android SDK : apksigner verify --verbose --print-certs SportFoot-Android.apk.
