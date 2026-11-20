@@ -1,0 +1,245 @@
+// !$*UTF8*$!
+{
+	"archiveVersion" = "1";
+	"classes" = {
+	};
+	"objectVersion" = "56";
+	"objects" = {
+		"76189A5AC12D17099BD5073E" = {
+			"isa" = "PBXFileReference";
+			"path" = "main.m";
+			"lastKnownFileType" = "sourcecode.c.objc";
+			"sourceTree" = "<group>";
+		};
+		"035C618958D827F1A19865D4" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "76189A5AC12D17099BD5073E";
+		};
+		"C0CDC9FB19A7238FEE9FD1C7" = {
+			"isa" = "PBXFileReference";
+			"path" = "../src/game.c";
+			"lastKnownFileType" = "sourcecode.c.c";
+			"sourceTree" = "<group>";
+		};
+		"69636DEE67996EFD1A5F1C1D" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "C0CDC9FB19A7238FEE9FD1C7";
+		};
+		"EE7F4286173216DC119CD824" = {
+			"isa" = "PBXFileReference";
+			"path" = "../src/game.h";
+			"lastKnownFileType" = "sourcecode.c.h";
+			"sourceTree" = "<group>";
+		};
+		"7B594B6DB375E1BF3F23CDD6" = {
+			"isa" = "PBXFileReference";
+			"path" = "Info.plist";
+			"lastKnownFileType" = "text.plist.xml";
+			"sourceTree" = "<group>";
+		};
+		"0714207368D89D6F3CFFB158" = {
+			"isa" = "PBXFileReference";
+			"path" = "../art/cover.png";
+			"lastKnownFileType" = "image.png";
+			"sourceTree" = "<group>";
+		};
+		"D772AAACBFA72CF65E6D7874" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "0714207368D89D6F3CFFB158";
+		};
+		"28AAD1477D5182D66D4B03B3" = {
+			"isa" = "PBXFileReference";
+			"path" = "Assets.xcassets";
+			"lastKnownFileType" = "folder.assetcatalog";
+			"sourceTree" = "<group>";
+		};
+		"4F34CA82455217B81250B0FB" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "28AAD1477D5182D66D4B03B3";
+		};
+		"B4B5BABF2DDB455E44208CA4" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "wrapper.framework";
+			"name" = "UIKit.framework";
+			"path" = "System/Library/Frameworks/UIKit.framework";
+			"sourceTree" = "SDKROOT";
+		};
+		"FB3B49D01EA9669B2FD28A1D" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "B4B5BABF2DDB455E44208CA4";
+		};
+		"FDDE6AFA94415E200D1CC905" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "wrapper.framework";
+			"name" = "Foundation.framework";
+			"path" = "System/Library/Frameworks/Foundation.framework";
+			"sourceTree" = "SDKROOT";
+		};
+		"023350364B397D43BCCF03D9" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "FDDE6AFA94415E200D1CC905";
+		};
+		"1D4164608055FD1355839987" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "wrapper.framework";
+			"name" = "CoreGraphics.framework";
+			"path" = "System/Library/Frameworks/CoreGraphics.framework";
+			"sourceTree" = "SDKROOT";
+		};
+		"513BF6488A448B0F82D07907" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "1D4164608055FD1355839987";
+		};
+		"8E560CE6AEEFF5F21DF80F9E" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "wrapper.framework";
+			"name" = "QuartzCore.framework";
+			"path" = "System/Library/Frameworks/QuartzCore.framework";
+			"sourceTree" = "SDKROOT";
+		};
+		"153E24423769E5638A22866B" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "8E560CE6AEEFF5F21DF80F9E";
+		};
+		"38A007151ABE87CC01A5B6E9" = {
+			"isa" = "PBXFileReference";
+			"explicitFileType" = "wrapper.application";
+			"path" = "SportFoot.app";
+			"sourceTree" = "BUILT_PRODUCTS_DIR";
+		};
+		"FBDC4F23F93125BBEEAE800C" = {
+			"isa" = "PBXGroup";
+			"children" = ("38A007151ABE87CC01A5B6E9", );
+			"name" = "Products";
+			"sourceTree" = "<group>";
+		};
+		"72F77E84BA0149B2AF1051F1" = {
+			"isa" = "PBXGroup";
+			"children" = ("B4B5BABF2DDB455E44208CA4", "FDDE6AFA94415E200D1CC905", "1D4164608055FD1355839987", "8E560CE6AEEFF5F21DF80F9E", );
+			"name" = "Frameworks";
+			"sourceTree" = "<group>";
+		};
+		"64292B1C2B2E13EAD8788FC8" = {
+			"isa" = "PBXGroup";
+			"children" = ("76189A5AC12D17099BD5073E", "C0CDC9FB19A7238FEE9FD1C7", "EE7F4286173216DC119CD824", "7B594B6DB375E1BF3F23CDD6", "0714207368D89D6F3CFFB158", "28AAD1477D5182D66D4B03B3", "72F77E84BA0149B2AF1051F1", "FBDC4F23F93125BBEEAE800C", );
+			"sourceTree" = "<group>";
+		};
+		"2EB56BE3C2D93CDAB0C52E67" = {
+			"isa" = "PBXSourcesBuildPhase";
+			"files" = ("035C618958D827F1A19865D4", "69636DEE67996EFD1A5F1C1D", );
+			"buildActionMask" = "2147483647";
+			"runOnlyForDeploymentPostprocessing" = "0";
+		};
+		"AF39DD055C3EF8226FBE929D" = {
+			"isa" = "PBXFrameworksBuildPhase";
+			"files" = ("FB3B49D01EA9669B2FD28A1D", "023350364B397D43BCCF03D9", "513BF6488A448B0F82D07907", "153E24423769E5638A22866B", );
+			"buildActionMask" = "2147483647";
+			"runOnlyForDeploymentPostprocessing" = "0";
+		};
+		"87DF60DE337FB58864343E39" = {
+			"isa" = "PBXResourcesBuildPhase";
+			"files" = ("D772AAACBFA72CF65E6D7874", "4F34CA82455217B81250B0FB", );
+			"buildActionMask" = "2147483647";
+			"runOnlyForDeploymentPostprocessing" = "0";
+		};
+		"89E1FD6268CC0F221A2BE178" = {
+			"isa" = "XCBuildConfiguration";
+			"name" = "Debug";
+			"buildSettings" = {
+				"SDKROOT" = "iphoneos";
+				"IPHONEOS_DEPLOYMENT_TARGET" = "15.0";
+				"CLANG_ENABLE_OBJC_ARC" = "YES";
+				"GCC_C_LANGUAGE_STANDARD" = "c11";
+				"GCC_OPTIMIZATION_LEVEL" = "0";
+				"DEBUG_INFORMATION_FORMAT" = "dwarf";
+			};
+		};
+		"E6DE6C99132752C914FEF632" = {
+			"isa" = "XCBuildConfiguration";
+			"name" = "Release";
+			"buildSettings" = {
+				"SDKROOT" = "iphoneos";
+				"IPHONEOS_DEPLOYMENT_TARGET" = "15.0";
+				"CLANG_ENABLE_OBJC_ARC" = "YES";
+				"GCC_C_LANGUAGE_STANDARD" = "c11";
+				"GCC_OPTIMIZATION_LEVEL" = "s";
+				"DEBUG_INFORMATION_FORMAT" = "dwarf-with-dsym";
+			};
+		};
+		"49EA05A46B1A86EA7E413B43" = {
+			"isa" = "XCConfigurationList";
+			"buildConfigurations" = ("89E1FD6268CC0F221A2BE178", "E6DE6C99132752C914FEF632", );
+			"defaultConfigurationIsVisible" = "0";
+			"defaultConfigurationName" = "Release";
+		};
+		"7082CC0B6FC1282FCEABD07A" = {
+			"isa" = "XCBuildConfiguration";
+			"name" = "Debug";
+			"buildSettings" = {
+				"PRODUCT_NAME" = "SportFoot";
+				"PRODUCT_BUNDLE_IDENTIFIER" = "fr.sportfoot.arcade";
+				"MARKETING_VERSION" = "1.0";
+				"CURRENT_PROJECT_VERSION" = "1";
+				"TARGETED_DEVICE_FAMILY" = "1";
+				"SUPPORTED_PLATFORMS" = "iphoneos iphonesimulator";
+				"SUPPORTS_MACCATALYST" = "NO";
+				"CODE_SIGN_STYLE" = "Automatic";
+				"INFOPLIST_FILE" = "Info.plist";
+				"ASSETCATALOG_COMPILER_APPICON_NAME" = "AppIcon";
+				"HEADER_SEARCH_PATHS" = "$(SRCROOT)/../src";
+				"GCC_PREPROCESSOR_DEFINITIONS" = ("$(inherited)", "SF_RUNTIME_COVER=1", );
+			};
+		};
+		"639A7CA24D39909E713B47F7" = {
+			"isa" = "XCBuildConfiguration";
+			"name" = "Release";
+			"buildSettings" = {
+				"PRODUCT_NAME" = "SportFoot";
+				"PRODUCT_BUNDLE_IDENTIFIER" = "fr.sportfoot.arcade";
+				"MARKETING_VERSION" = "1.0";
+				"CURRENT_PROJECT_VERSION" = "1";
+				"TARGETED_DEVICE_FAMILY" = "1";
+				"SUPPORTED_PLATFORMS" = "iphoneos iphonesimulator";
+				"SUPPORTS_MACCATALYST" = "NO";
+				"CODE_SIGN_STYLE" = "Automatic";
+				"INFOPLIST_FILE" = "Info.plist";
+				"ASSETCATALOG_COMPILER_APPICON_NAME" = "AppIcon";
+				"HEADER_SEARCH_PATHS" = "$(SRCROOT)/../src";
+				"GCC_PREPROCESSOR_DEFINITIONS" = ("$(inherited)", "SF_RUNTIME_COVER=1", );
+			};
+		};
+		"F497FD0CF9CA1625C4A860DE" = {
+			"isa" = "XCConfigurationList";
+			"buildConfigurations" = ("7082CC0B6FC1282FCEABD07A", "639A7CA24D39909E713B47F7", );
+			"defaultConfigurationIsVisible" = "0";
+			"defaultConfigurationName" = "Release";
+		};
+		"0E8A3AD980EC179856012B7E" = {
+			"isa" = "PBXNativeTarget";
+			"buildConfigurationList" = "F497FD0CF9CA1625C4A860DE";
+			"buildPhases" = ("2EB56BE3C2D93CDAB0C52E67", "AF39DD055C3EF8226FBE929D", "87DF60DE337FB58864343E39", );
+			"buildRules" = ();
+			"dependencies" = ();
+			"name" = "SportFoot";
+			"productName" = "SportFoot";
+			"productReference" = "38A007151ABE87CC01A5B6E9";
+			"productType" = "com.apple.product-type.application";
+		};
+		"98F54143AB4E86B28C3AFEE0" = {
+			"isa" = "PBXProject";
+			"attributes" = {
+				"LastUpgradeCheck" = "1600";
+			};
+			"buildConfigurationList" = "49EA05A46B1A86EA7E413B43";
+			"compatibilityVersion" = "Xcode 14.0";
+			"developmentRegion" = "fr";
+			"knownRegions" = ("fr", "Base", );
+			"mainGroup" = "64292B1C2B2E13EAD8788FC8";
+			"productRefGroup" = "FBDC4F23F93125BBEEAE800C";
+			"projectDirPath" = "";
+			"projectRoot" = "";
+			"targets" = ("0E8A3AD980EC179856012B7E", );
+		};
+	};
+	"rootObject" = "98F54143AB4E86B28C3AFEE0";
+}
