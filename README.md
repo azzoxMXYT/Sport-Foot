@@ -8,7 +8,8 @@ Un jeu de football **natif, hors ligne, en français**. Matchs solo de deux minu
 
 - **[Windows 10/11 x64](downloads/SportFoot-Windows.exe)** : ouvrir l’exécutable et appuyer sur **Entrée**. Flèches / ZQSD / WASD : déplacement. Maj : sprint. C : passe ou changement de joueur. Espace / X : tir. Échap : pause.
 - **[Android 8+ ARM64](downloads/SportFoot-Android.apk)** : installer l’APK sur un téléphone compatible et jouer en paysage. Glisser dans la moitié gauche de l’écran pour diriger le joueur ; utiliser **PASSE** et **TIR** avec l’autre main.
-- **[Pack complet](SportFoot-1.0.zip)** : les deux applications, les signatures et le guide. Pas de version iOS ou macOS dans cette édition.
+- **[iPhone (iOS 15+)](ios/README.md)** : portage natif UIKit en mode paysage. Projet Xcode fourni ; pas encore de distribution TestFlight ou App Store.
+- **[Pack Windows + Android](SportFoot-1.0.zip)** : les deux applications, les signatures et le guide.
 
 ![Match entre les Dunes et les Volcans](docs/match.png)
 
@@ -18,7 +19,7 @@ L’EXE contient une signature **Authenticode SHA-256** et l’APK des signature
 
 ### Développement
 
-Le moteur C (`src/game.c`) est partagé entre Win32/GDI et Android NativeActivity. `tools/art.py` convertit la couverture indexée en texture C. Depuis la racine :
+Le moteur C (`src/game.c`) est partagé entre Win32/GDI, Android NativeActivity et iOS/UIKit. `tools/art.py` convertit la couverture indexée en texture C. Depuis la racine :
 
 ```sh
 python3 -m pip install Pillow

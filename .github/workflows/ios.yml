@@ -1,0 +1,30 @@
+name: Vérifier le portage iPhone
+on:
+  push:
+    paths: ['ios/**', 'src/game.[ch]', 'art/cover.png', '.github/workflows/ios.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: macos-15
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Compiler pour iPhone (sans identité de distribution)
+        run: xcodebuild -quiet -project ios/SportFoot.xcodeproj -scheme SportFoot -configuration Release -destination 'generic/platform=iOS' -derivedDataPath build/ios CODE_SIGNING_ALLOWED=NO build
+      - name: Compiler et lancer sur simulateur iPhone
+        run: |
+          device=$(xcrun simctl list devices available -j | python3 -c 'import sys,json;print(next(d["udid"] for k,l in sorted(json.load(sys.stdin)["devices"].items(),reverse=True) if "iOS" in k for d in l if d["name"].startswith("iPhone")))')
+          xcrun simctl boot "$device"
+          xcodebuild -quiet -project ios/SportFoot.xcodeproj -scheme SportFoot -configuration Debug -destination "id=$device" -derivedDataPath build/sim build
+          xcrun simctl bootstatus "$device" -b
+          xcrun simctl install "$device" build/sim/Build/Products/Debug-iphonesimulator/SportFoot.app
+          xcrun simctl launch "$device" fr.sportfoot.arcade
+          sleep 4
+          xcrun simctl io "$device" screenshot build/iphone.png
+          xcrun simctl terminate "$device" fr.sportfoot.arcade
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: capture-simulateur-iphone
+          path: build/iphone.png

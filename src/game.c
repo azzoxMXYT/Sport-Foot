@@ -176,11 +176,18 @@ static void crowd(int top, int bottom) {
     }
   rect(0, bottom - 3, W, 3, INK);
 }
+#ifdef SF_RUNTIME_COVER
+/* UIKit decodes the bundled PNG once at launch. */
+unsigned int sfCover[411][408];
+#define COVER_AT(y, x) sfCover[y][x]
+#else
 #include "cover.inc"
+#define COVER_AT(y, x) inkset[artwork[y][x]]
+#endif
 static void cover(void) {
   for (int y = 0; y < 411; y++)
     for (int x = 0; x < 408; x++)
-      pixels[y * W + 360 + x] = inkset[artwork[y][x]];
+      pixels[y * W + 360 + x] = COVER_AT(y, x);
   for (int y = 0; y < H; y++) {
     int width = 452 - y / 5;
     rect(0, y, width, 1, INK);

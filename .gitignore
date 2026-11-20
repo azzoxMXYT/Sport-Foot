@@ -6,3 +6,9 @@
 *.pk8
 *.idsig
 __pycache__/
+
+# Xcode user state and private signing material
+xcuserdata/
+DerivedData/
+*.mobileprovision
+*.p8
